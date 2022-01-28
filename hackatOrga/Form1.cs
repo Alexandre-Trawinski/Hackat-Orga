@@ -1,8 +1,12 @@
-﻿using System;
+﻿using hackatOrga.Models;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +21,76 @@ namespace hackatOrga
             InitializeComponent();
         }
 
+        private void btn_imprimer_Click(object sender, EventArgs e)
+        {
+            bdatrawinski1Context cnx = new bdatrawinski1Context();
+
+            if (cbx_hackathons.SelectedIndex != 0)
+            {
+                //On récupère le client choisi dans la liste
+                Hackathon unHackathon = (Hackathon)cbx_hackathons.SelectedItem;
+            }
+
+            //iTextSharp.LGPLv2.Core
+            //Création d'un document
+            Document unDocument = new Document();
+             PdfWriter.GetInstance(unDocument, new FileStream("C:\\Users\\atrawinski\\Documents\\listeParticipants.pdf", FileMode.Create));
+             unDocument.Open();
+
+             //Paragraphe centré avec une police de 14 et du gras
+             iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD);
+             Paragraph titre = new Paragraph("Liste des participants", myFont);
+             titre.Alignment = Element.ALIGN_CENTER;
+             titre.SpacingAfter = 12;
+             unDocument.Add(titre);
+
+             //Création d'un tableau
+             PdfPTable tableau = new PdfPTable(9);
+
+            //Remplissage avec la liste des clients
+            foreach (Participant c in cnx.Participants.ToList())
+             {
+                tableau.AddCell(c.Nom);
+                tableau.AddCell(c.Prenom);
+                tableau.AddCell(c.DateNaissance.ToString("dd/MM/yyyy"));
+                tableau.AddCell(c.Rue);
+                tableau.AddCell(c.Ville);
+                tableau.AddCell(c.CodePostal);
+                tableau.AddCell(c.Mail);
+                tableau.AddCell(c.Tel);
+                tableau.AddCell(c.Portfolio);
+            }
+
+             unDocument.Add(tableau);
+
+             //Enregistrement du fichier
+             unDocument.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            bdatrawinski1Context cnx = new bdatrawinski1Context();
+
+            cbx_hackathons.DataSource = cnx.Hackathons.OrderBy(cli => cli.Theme).ToList();
+            cbx_hackathons.DisplayMember = "theme";
+            cbx_hackathons.ValueMember = "idHackathon";
+            cbx_hackathons.ValueMember = "inscriptionHackathons";
+        }
+
+        private void lbx_hackathons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbx_hackathons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_AjoutHackathon_Click(object sender, EventArgs e)
+        {
+            Ajout ajoutHackathon = new Ajout();
+            ajoutHackathon.ShowDialog();
+        }
     }
 }
