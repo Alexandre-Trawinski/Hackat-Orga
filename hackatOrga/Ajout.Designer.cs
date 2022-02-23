@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace hackatOrga
 {
     partial class Ajout
@@ -53,10 +55,14 @@ namespace hackatOrga
             this.tbxRue = new System.Windows.Forms.TextBox();
             this.tbxLieu = new System.Windows.Forms.TextBox();
             this.tbxTheme = new System.Windows.Forms.TextBox();
-            this.tbxNbrePlaces = new System.Windows.Forms.TextBox();
             this.tbxImage = new System.Windows.Forms.TextBox();
+            this.btnEnregistrer = new System.Windows.Forms.Button();
+            this.nmNbPlaces = new System.Windows.Forms.NumericUpDown();
+            this.lblSuccess = new System.Windows.Forms.Label();
+            this.lblEchec = new System.Windows.Forms.Label();
             this.gbxHoraires.SuspendLayout();
             this.gbxAdresse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNbPlaces)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDateDebut
@@ -163,9 +169,10 @@ namespace hackatOrga
             this.lblImage.AutoSize = true;
             this.lblImage.Location = new System.Drawing.Point(494, 136);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(46, 15);
+            this.lblImage.Size = new System.Drawing.Size(78, 15);
             this.lblImage.TabIndex = 11;
-            this.lblImage.Text = "Image :";
+            this.lblImage.Text = "Image (URL) :";
+            this.lblImage.Click += new System.EventHandler(this.lblImage_Click);
             // 
             // gbxHoraires
             // 
@@ -201,6 +208,8 @@ namespace hackatOrga
             this.dtpHeureDebut.Name = "dtpHeureDebut";
             this.dtpHeureDebut.Size = new System.Drawing.Size(200, 23);
             this.dtpHeureDebut.TabIndex = 13;
+            this.dtpHeureDebut.Value = new System.DateTime(2022, 2, 22, 13, 14, 0, 0);
+            this.dtpHeureDebut.ValueChanged += new System.EventHandler(this.dtpHeureDebut_ValueChanged);
             // 
             // dtpLimite
             // 
@@ -225,6 +234,7 @@ namespace hackatOrga
             this.dtpDebut.Name = "dtpDebut";
             this.dtpDebut.Size = new System.Drawing.Size(200, 23);
             this.dtpDebut.TabIndex = 10;
+            this.dtpDebut.ValueChanged += new System.EventHandler(this.dtpDebut_ValueChanged);
             // 
             // gbxAdresse
             // 
@@ -278,13 +288,6 @@ namespace hackatOrga
             this.tbxTheme.Size = new System.Drawing.Size(385, 23);
             this.tbxTheme.TabIndex = 12;
             // 
-            // tbxNbrePlaces
-            // 
-            this.tbxNbrePlaces.Location = new System.Drawing.Point(625, 85);
-            this.tbxNbrePlaces.Name = "tbxNbrePlaces";
-            this.tbxNbrePlaces.Size = new System.Drawing.Size(280, 23);
-            this.tbxNbrePlaces.TabIndex = 14;
-            // 
             // tbxImage
             // 
             this.tbxImage.Location = new System.Drawing.Point(570, 133);
@@ -292,13 +295,55 @@ namespace hackatOrga
             this.tbxImage.Size = new System.Drawing.Size(385, 23);
             this.tbxImage.TabIndex = 15;
             // 
+            // btnEnregistrer
+            // 
+            this.btnEnregistrer.Location = new System.Drawing.Point(625, 336);
+            this.btnEnregistrer.Name = "btnEnregistrer";
+            this.btnEnregistrer.Size = new System.Drawing.Size(143, 52);
+            this.btnEnregistrer.TabIndex = 16;
+            this.btnEnregistrer.Text = "Enregistrer";
+            this.btnEnregistrer.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
+            // 
+            // nmNbPlaces
+            // 
+            this.nmNbPlaces.Location = new System.Drawing.Point(625, 88);
+            this.nmNbPlaces.Name = "nmNbPlaces";
+            this.nmNbPlaces.Size = new System.Drawing.Size(120, 23);
+            this.nmNbPlaces.TabIndex = 18;
+            // 
+            // lblSuccess
+            // 
+            this.lblSuccess.AutoSize = true;
+            this.lblSuccess.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSuccess.ForeColor = System.Drawing.Color.OliveDrab;
+            this.lblSuccess.Location = new System.Drawing.Point(570, 446);
+            this.lblSuccess.Name = "lblSuccess";
+            this.lblSuccess.Size = new System.Drawing.Size(246, 25);
+            this.lblSuccess.TabIndex = 19;
+            this.lblSuccess.Text = "Hackathon crée avec succès";
+            // 
+            // lblEchec
+            // 
+            this.lblEchec.AutoSize = true;
+            this.lblEchec.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEchec.ForeColor = System.Drawing.Color.Red;
+            this.lblEchec.Location = new System.Drawing.Point(532, 476);
+            this.lblEchec.Name = "lblEchec";
+            this.lblEchec.Size = new System.Drawing.Size(337, 25);
+            this.lblEchec.TabIndex = 20;
+            this.lblEchec.Text = "Echec lors de la création du hackathon\r\n";
+            // 
             // Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 593);
+            this.Controls.Add(this.lblEchec);
+            this.Controls.Add(this.lblSuccess);
+            this.Controls.Add(this.nmNbPlaces);
+            this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.tbxImage);
-            this.Controls.Add(this.tbxNbrePlaces);
             this.Controls.Add(this.tbxTheme);
             this.Controls.Add(this.gbxAdresse);
             this.Controls.Add(this.gbxHoraires);
@@ -311,9 +356,20 @@ namespace hackatOrga
             this.gbxHoraires.PerformLayout();
             this.gbxAdresse.ResumeLayout(false);
             this.gbxAdresse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNbPlaces)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void dtpHeureDebut_ValueChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void lblImage_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -340,9 +396,12 @@ namespace hackatOrga
         private System.Windows.Forms.TextBox tbxRue;
         private System.Windows.Forms.TextBox tbxLieu;
         private System.Windows.Forms.TextBox tbxTheme;
-        private System.Windows.Forms.TextBox tbxNbrePlaces;
         private System.Windows.Forms.TextBox tbxImage;
         private System.Windows.Forms.DateTimePicker dtpHeureFin;
         private System.Windows.Forms.DateTimePicker dtpHeureDebut;
+        private System.Windows.Forms.Button btnEnregistrer;
+        private System.Windows.Forms.NumericUpDown nmNbPlaces;
+        private System.Windows.Forms.Label lblSuccess;
+        private System.Windows.Forms.Label lblEchec;
     }
 }

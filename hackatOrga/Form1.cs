@@ -27,8 +27,9 @@ namespace hackatOrga
 
             if (cbx_hackathons.SelectedIndex != 0)
             {
-                //On récupère le client choisi dans la liste
+                //On récupère le hackathon choisi dans la liste
                 Hackathon unHackathon = (Hackathon)cbx_hackathons.SelectedItem;
+                int idHackathon = unHackathon.IdHackathon;
             }
 
             //iTextSharp.LGPLv2.Core
