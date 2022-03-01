@@ -48,24 +48,40 @@ namespace hackatOrga
              //Création d'un tableau
              PdfPTable tableau = new PdfPTable(9);
 
-            //Remplissage avec la liste des clients
-            foreach (Participant c in cnx.Participants.ToList())
-             {
-                tableau.AddCell(c.Nom);
-                tableau.AddCell(c.Prenom);
-                tableau.AddCell(c.DateNaissance.ToString("dd/MM/yyyy"));
-                tableau.AddCell(c.Rue);
-                tableau.AddCell(c.Ville);
-                tableau.AddCell(c.CodePostal);
-                tableau.AddCell(c.Mail);
-                tableau.AddCell(c.Tel);
-                tableau.AddCell(c.Portfolio);
+            List<int> lesInscriptions = new List<int>();
+            //on cherche si ce participant est inscrit au hackathon
+            foreach (InscriptionHackathon i in cnx.InscriptionHackathons.ToList())
+            {
+                if (cbx_hackathons.SelectedIndex == i.IdHackathon)
+                {
+                    lesInscriptions.Add(i.IdParticipant);
+                }
             }
 
-             unDocument.Add(tableau);
+            foreach (Participant c in cnx.Participants.ToList())
+            {
+                foreach (int p in lesInscriptions)
+                {
+                    if (p == c.IdParticipant)
+                    {
+                        tableau.AddCell(c.Nom);
+                        tableau.AddCell(c.Prenom);
+                        tableau.AddCell(c.DateNaissance.ToString("dd/MM/yyyy"));
+                        tableau.AddCell(c.Rue);
+                        tableau.AddCell(c.Ville);
+                        tableau.AddCell(c.CodePostal);
+                        tableau.AddCell(c.Mail);
+                        tableau.AddCell(c.Tel);
+                        tableau.AddCell(c.Portfolio);
+                    }
+                }
+            }
 
-             //Enregistrement du fichier
-             unDocument.Close();
+            unDocument.Add(tableau);
+
+
+            //Enregistrement du fichier
+            unDocument.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -92,6 +108,12 @@ namespace hackatOrga
         {
             Ajout ajoutHackathon = new Ajout();
             ajoutHackathon.ShowDialog();
+        }
+
+        private void btn_AjoutEvenement_Click(object sender, EventArgs e)
+        {
+            AjoutEvent ajoutEvent = new AjoutEvent();
+            ajoutEvent.ShowDialog();
         }
     }
 }

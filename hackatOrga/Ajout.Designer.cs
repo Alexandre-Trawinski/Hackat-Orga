@@ -58,8 +58,6 @@ namespace hackatOrga
             this.tbxImage = new System.Windows.Forms.TextBox();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.nmNbPlaces = new System.Windows.Forms.NumericUpDown();
-            this.lblSuccess = new System.Windows.Forms.Label();
-            this.lblEchec = new System.Windows.Forms.Label();
             this.gbxHoraires.SuspendLayout();
             this.gbxAdresse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmNbPlaces)).BeginInit();
@@ -312,35 +310,11 @@ namespace hackatOrga
             this.nmNbPlaces.Size = new System.Drawing.Size(120, 23);
             this.nmNbPlaces.TabIndex = 18;
             // 
-            // lblSuccess
-            // 
-            this.lblSuccess.AutoSize = true;
-            this.lblSuccess.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSuccess.ForeColor = System.Drawing.Color.OliveDrab;
-            this.lblSuccess.Location = new System.Drawing.Point(570, 446);
-            this.lblSuccess.Name = "lblSuccess";
-            this.lblSuccess.Size = new System.Drawing.Size(246, 25);
-            this.lblSuccess.TabIndex = 19;
-            this.lblSuccess.Text = "Hackathon crée avec succès";
-            // 
-            // lblEchec
-            // 
-            this.lblEchec.AutoSize = true;
-            this.lblEchec.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEchec.ForeColor = System.Drawing.Color.Red;
-            this.lblEchec.Location = new System.Drawing.Point(532, 476);
-            this.lblEchec.Name = "lblEchec";
-            this.lblEchec.Size = new System.Drawing.Size(337, 25);
-            this.lblEchec.TabIndex = 20;
-            this.lblEchec.Text = "Echec lors de la création du hackathon\r\n";
-            // 
             // Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 593);
-            this.Controls.Add(this.lblEchec);
-            this.Controls.Add(this.lblSuccess);
             this.Controls.Add(this.nmNbPlaces);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.tbxImage);
@@ -401,7 +375,5 @@ namespace hackatOrga
         private System.Windows.Forms.DateTimePicker dtpHeureDebut;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.NumericUpDown nmNbPlaces;
-        private System.Windows.Forms.Label lblSuccess;
-        private System.Windows.Forms.Label lblEchec;
     }
 }
