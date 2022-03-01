@@ -34,8 +34,9 @@ namespace hackatOrga
 
             //iTextSharp.LGPLv2.Core
             //Création d'un document
-            Document unDocument = new Document();
-             PdfWriter.GetInstance(unDocument, new FileStream("C:\\Users\\atrawinski\\Documents\\listeParticipants.pdf", FileMode.Create));
+             Document unDocument = new Document();
+             FileStream doc = new FileStream("C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf", FileMode.Create);
+             PdfWriter.GetInstance(unDocument, doc);
              unDocument.Open();
 
              //Paragraphe centré avec une police de 14 et du gras
@@ -82,6 +83,8 @@ namespace hackatOrga
 
             //Enregistrement du fichier
             unDocument.Close();
+            System.Diagnostics.Process.Start("C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf");
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
