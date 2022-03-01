@@ -47,7 +47,7 @@ namespace hackatOrga
              unDocument.Add(titre);
 
              //Création d'un tableau
-             PdfPTable tableau = new PdfPTable(9);
+             PdfPTable tableau = new PdfPTable(7);
 
             List<int> lesInscriptions = new List<int>();
             //on cherche si ce participant est inscrit au hackathon
@@ -69,22 +69,20 @@ namespace hackatOrga
                         tableau.AddCell(c.Prenom);
                         tableau.AddCell(c.DateNaissance.ToString("dd/MM/yyyy"));
                         tableau.AddCell(c.Rue);
-                        tableau.AddCell(c.Ville);
-                        tableau.AddCell(c.CodePostal);
+                        tableau.AddCell(c.Ville+" "+c.CodePostal);
                         tableau.AddCell(c.Mail);
                         tableau.AddCell(c.Tel);
-                        tableau.AddCell(c.Portfolio);
                     }
                 }
             }
 
             unDocument.Add(tableau);
 
-
             //Enregistrement du fichier
             unDocument.Close();
-            System.Diagnostics.Process.Start("C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf");
-            
+            doc.Close(); 
+            //On ouvre le fichier pdf
+            System.Diagnostics.Process.Start("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe", "C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf") ;
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -56,8 +56,8 @@ namespace hackatOrga
             { 
                 
             }
-            var HeureDebut = new TimeSpan(0, dtpDebut.Value.Hour, dtpFin.Value.Minute);
-            var HeureFin = new TimeSpan(0, dtpFin.Value.Hour, dtpFin.Value.Minute);
+            var HeureDebut = new TimeSpan(dtpDebut.Value.Hour, dtpFin.Value.Minute,0);
+            var HeureFin = new TimeSpan(dtpFin.Value.Hour, dtpFin.Value.Minute,0);
             var duree = HeureFin.Subtract(HeureDebut);
             int nbPlaces = Decimal.ToInt32(nmPlaces.Value);
             Evenement newEvenement = new Evenement()

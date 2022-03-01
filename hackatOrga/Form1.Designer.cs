@@ -44,7 +44,7 @@ namespace hackatOrga
             this.btn_AjoutEvenement.Name = "btn_AjoutEvenement";
             this.btn_AjoutEvenement.Size = new System.Drawing.Size(143, 97);
             this.btn_AjoutEvenement.TabIndex = 0;
-            this.btn_AjoutEvenement.Text = "Ajouter une événement";
+            this.btn_AjoutEvenement.Text = "Ajouter un événement";
             this.btn_AjoutEvenement.UseVisualStyleBackColor = false;
             this.btn_AjoutEvenement.Click += new System.EventHandler(this.btn_AjoutEvenement_Click);
             // 

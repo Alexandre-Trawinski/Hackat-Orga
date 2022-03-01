@@ -202,12 +202,14 @@ namespace hackatOrga
             // 
             // btnAjouter
             // 
+            this.btnAjouter.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouter.Location = new System.Drawing.Point(624, 439);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(120, 49);
+            this.btnAjouter.Size = new System.Drawing.Size(151, 61);
             this.btnAjouter.TabIndex = 10;
             this.btnAjouter.Text = "AJOUTER";
-            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // label5
