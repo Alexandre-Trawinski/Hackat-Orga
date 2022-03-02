@@ -44,6 +44,7 @@ namespace hackatOrga
              titre.Alignment = Element.ALIGN_CENTER;
              titre.SpacingAfter = 12;
              unDocument.Add(titre);
+            string toto = "toto";
 
              //Création d'un tableau
              PdfPTable tableau = new PdfPTable(9);
