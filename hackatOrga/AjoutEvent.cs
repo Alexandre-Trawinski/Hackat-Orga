@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using hackatOrga.Models;
+using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace hackatOrga
 {
@@ -40,6 +42,15 @@ namespace hackatOrga
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
+            FileStream fs;
+            BinaryReader br;
+            string FileName = tbImgEvent.Text;
+            byte[] ImageData;
+            fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
+            br = new BinaryReader(fs);
+            ImageData = br.ReadBytes((int)fs.Length);
+            br.Close();
+            fs.Close();
             bdatrawinski1Context cnx = new bdatrawinski1Context();
             if (cbHackathons.SelectedIndex != 0)
             {
@@ -70,7 +81,7 @@ namespace hackatOrga
                 NbParticipants = nbPlaces,
                 Intervenant = tbIntervenant.Text,
                 IdHackathon = cbHackathons.SelectedIndex,
-                Image = tbImg.Text,
+                Image = ImageData,
                 Type = typeEvent
             };
             cnx.Evenements.Add(newEvenement);
@@ -85,6 +96,8 @@ namespace hackatOrga
             cbHackathons.DisplayMember = "theme";
             cbHackathons.ValueMember = "idHackathon";
             cbHackathons.ValueMember = "inscriptionHackathons";
+            this.tbImgEvent.Click += new System.EventHandler(this.pbEvent_Click);
+            this.tbImgEvent.Enter += new System.EventHandler(this.pbEvent_Click);
         }
 
         private void radioConf_CheckedChanged(object sender, EventArgs e)
@@ -104,6 +117,24 @@ namespace hackatOrga
                 string typeEvent = "Atelier";
                 tbIntervenant.Enabled = false;
                 nmPlaces.Enabled = true;
+            }
+        }
+
+        private void pbEvent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "Image files | *.jpg";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    tbImgEvent.Text = openFileDialog1.FileName;
+                    pbEvent.Image = System.Drawing.Image.FromFile(openFileDialog1.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

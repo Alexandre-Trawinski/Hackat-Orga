@@ -20,6 +20,7 @@ namespace hackatOrga.Models
         public virtual DbSet<Evenement> Evenements { get; set; }
         public virtual DbSet<Hackathon> Hackathons { get; set; }
         public virtual DbSet<InscriptionHackathon> InscriptionHackathons { get; set; }
+        public virtual DbSet<InscriptionMobile> InscriptionMobiles { get; set; }
         public virtual DbSet<Participant> Participants { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -57,7 +58,7 @@ namespace hackatOrga.Models
 
                 entity.Property(e => e.Image)
                     .IsRequired()
-                    .HasMaxLength(500)
+                    .HasColumnType("longblob")
                     .HasColumnName("image");
 
                 entity.Property(e => e.Intervenant)
@@ -131,7 +132,7 @@ namespace hackatOrga.Models
                     .HasDefaultValueSql("'NULL'");
 
                 entity.Property(e => e.Image)
-                    .HasMaxLength(255)
+                    .HasColumnType("longblob")
                     .HasColumnName("image")
                     .HasDefaultValueSql("'NULL'");
 
@@ -204,6 +205,36 @@ namespace hackatOrga.Models
                     .HasForeignKey(d => d.IdParticipant)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("InscriptionHackathon_ibfk_1");
+            });
+
+            modelBuilder.Entity<InscriptionMobile>(entity =>
+            {
+                entity.ToTable("InscriptionMobile");
+
+                entity.HasIndex(e => e.IdEvenement, "idEvenement");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("email");
+
+                entity.Property(e => e.IdEvenement)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("idEvenement");
+
+                entity.Property(e => e.Nom)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("nom");
+
+                entity.Property(e => e.Prenom)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("prenom");
             });
 
             modelBuilder.Entity<Participant>(entity =>

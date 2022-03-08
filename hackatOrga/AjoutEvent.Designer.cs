@@ -39,7 +39,7 @@ namespace hackatOrga
             this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tbLibelle = new System.Windows.Forms.TextBox();
-            this.tbImg = new System.Windows.Forms.TextBox();
+            this.tbImgEvent = new System.Windows.Forms.TextBox();
             this.tbSalle = new System.Windows.Forms.TextBox();
             this.tbIntervenant = new System.Windows.Forms.TextBox();
             this.nmPlaces = new System.Windows.Forms.NumericUpDown();
@@ -52,8 +52,10 @@ namespace hackatOrga
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pbEvent = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmPlaces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEvent)).BeginInit();
             this.SuspendLayout();
             // 
             // cbHackathons
@@ -142,36 +144,36 @@ namespace hackatOrga
             // 
             // tbLibelle
             // 
-            this.tbLibelle.Location = new System.Drawing.Point(624, 75);
+            this.tbLibelle.Location = new System.Drawing.Point(513, 76);
             this.tbLibelle.Name = "tbLibelle";
             this.tbLibelle.Size = new System.Drawing.Size(100, 23);
             this.tbLibelle.TabIndex = 3;
             // 
-            // tbImg
+            // tbImgEvent
             // 
-            this.tbImg.Location = new System.Drawing.Point(645, 178);
-            this.tbImg.Name = "tbImg";
-            this.tbImg.Size = new System.Drawing.Size(100, 23);
-            this.tbImg.TabIndex = 4;
-            this.tbImg.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbImgEvent.Location = new System.Drawing.Point(513, 197);
+            this.tbImgEvent.Name = "tbImgEvent";
+            this.tbImgEvent.Size = new System.Drawing.Size(100, 23);
+            this.tbImgEvent.TabIndex = 4;
+            this.tbImgEvent.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbSalle
             // 
-            this.tbSalle.Location = new System.Drawing.Point(624, 126);
+            this.tbSalle.Location = new System.Drawing.Point(513, 126);
             this.tbSalle.Name = "tbSalle";
             this.tbSalle.Size = new System.Drawing.Size(100, 23);
             this.tbSalle.TabIndex = 5;
             // 
             // tbIntervenant
             // 
-            this.tbIntervenant.Location = new System.Drawing.Point(657, 356);
+            this.tbIntervenant.Location = new System.Drawing.Point(527, 356);
             this.tbIntervenant.Name = "tbIntervenant";
             this.tbIntervenant.Size = new System.Drawing.Size(100, 23);
             this.tbIntervenant.TabIndex = 6;
             // 
             // nmPlaces
             // 
-            this.nmPlaces.Location = new System.Drawing.Point(691, 307);
+            this.nmPlaces.Location = new System.Drawing.Point(567, 307);
             this.nmPlaces.Name = "nmPlaces";
             this.nmPlaces.Size = new System.Drawing.Size(120, 23);
             this.nmPlaces.TabIndex = 7;
@@ -179,7 +181,7 @@ namespace hackatOrga
             // radioConf
             // 
             this.radioConf.AutoSize = true;
-            this.radioConf.Location = new System.Drawing.Point(624, 253);
+            this.radioConf.Location = new System.Drawing.Point(513, 260);
             this.radioConf.Name = "radioConf";
             this.radioConf.Size = new System.Drawing.Size(86, 19);
             this.radioConf.TabIndex = 8;
@@ -191,7 +193,7 @@ namespace hackatOrga
             // radioAtelier
             // 
             this.radioAtelier.AutoSize = true;
-            this.radioAtelier.Location = new System.Drawing.Point(716, 253);
+            this.radioAtelier.Location = new System.Drawing.Point(624, 262);
             this.radioAtelier.Name = "radioAtelier";
             this.radioAtelier.Size = new System.Drawing.Size(59, 19);
             this.radioAtelier.TabIndex = 9;
@@ -215,7 +217,7 @@ namespace hackatOrga
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(567, 76);
+            this.label5.Location = new System.Drawing.Point(439, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 15);
             this.label5.TabIndex = 11;
@@ -224,16 +226,16 @@ namespace hackatOrga
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(567, 181);
+            this.label6.Location = new System.Drawing.Point(439, 190);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
+            this.label6.Size = new System.Drawing.Size(43, 15);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Image (URL)";
+            this.label6.Text = "Image ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(567, 126);
+            this.label7.Location = new System.Drawing.Point(439, 126);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 15);
             this.label7.TabIndex = 13;
@@ -242,7 +244,7 @@ namespace hackatOrga
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(567, 309);
+            this.label8.Location = new System.Drawing.Point(439, 307);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 15);
             this.label8.TabIndex = 14;
@@ -251,7 +253,7 @@ namespace hackatOrga
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(567, 359);
+            this.label9.Location = new System.Drawing.Point(439, 356);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(67, 15);
@@ -261,18 +263,30 @@ namespace hackatOrga
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(567, 255);
+            this.label10.Location = new System.Drawing.Point(439, 255);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 15);
             this.label10.TabIndex = 16;
             this.label10.Text = "Type";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // pbEvent
+            // 
+            this.pbEvent.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pbEvent.Location = new System.Drawing.Point(754, 190);
+            this.pbEvent.Name = "pbEvent";
+            this.pbEvent.Size = new System.Drawing.Size(47, 36);
+            this.pbEvent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEvent.TabIndex = 17;
+            this.pbEvent.TabStop = false;
+            this.pbEvent.Click += new System.EventHandler(this.pbEvent_Click);
+            // 
             // AjoutEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 556);
+            this.ClientSize = new System.Drawing.Size(1003, 564);
+            this.Controls.Add(this.pbEvent);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -285,7 +299,7 @@ namespace hackatOrga
             this.Controls.Add(this.nmPlaces);
             this.Controls.Add(this.tbIntervenant);
             this.Controls.Add(this.tbSalle);
-            this.Controls.Add(this.tbImg);
+            this.Controls.Add(this.tbImgEvent);
             this.Controls.Add(this.tbLibelle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
@@ -296,6 +310,7 @@ namespace hackatOrga
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmPlaces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEvent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,7 +328,7 @@ namespace hackatOrga
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbLibelle;
-        private System.Windows.Forms.TextBox tbImg;
+        private System.Windows.Forms.TextBox tbImgEvent;
         private System.Windows.Forms.TextBox tbSalle;
         private System.Windows.Forms.TextBox tbIntervenant;
         private System.Windows.Forms.NumericUpDown nmPlaces;
@@ -326,5 +341,6 @@ namespace hackatOrga
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pbEvent;
     }
 }

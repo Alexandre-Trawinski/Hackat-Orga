@@ -55,12 +55,14 @@ namespace hackatOrga
             this.tbxRue = new System.Windows.Forms.TextBox();
             this.tbxLieu = new System.Windows.Forms.TextBox();
             this.tbxTheme = new System.Windows.Forms.TextBox();
-            this.tbxImage = new System.Windows.Forms.TextBox();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.nmNbPlaces = new System.Windows.Forms.NumericUpDown();
+            this.pbHackathon = new System.Windows.Forms.PictureBox();
+            this.txtImg = new System.Windows.Forms.TextBox();
             this.gbxHoraires.SuspendLayout();
             this.gbxAdresse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmNbPlaces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHackathon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDateDebut
@@ -156,7 +158,7 @@ namespace hackatOrga
             // lblNbrePlaces
             // 
             this.lblNbrePlaces.AutoSize = true;
-            this.lblNbrePlaces.Location = new System.Drawing.Point(491, 88);
+            this.lblNbrePlaces.Location = new System.Drawing.Point(432, 90);
             this.lblNbrePlaces.Name = "lblNbrePlaces";
             this.lblNbrePlaces.Size = new System.Drawing.Size(109, 15);
             this.lblNbrePlaces.TabIndex = 10;
@@ -165,11 +167,11 @@ namespace hackatOrga
             // lblImage
             // 
             this.lblImage.AutoSize = true;
-            this.lblImage.Location = new System.Drawing.Point(494, 136);
+            this.lblImage.Location = new System.Drawing.Point(491, 211);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(78, 15);
+            this.lblImage.Size = new System.Drawing.Size(46, 15);
             this.lblImage.TabIndex = 11;
-            this.lblImage.Text = "Image (URL) :";
+            this.lblImage.Text = "Image :";
             this.lblImage.Click += new System.EventHandler(this.lblImage_Click);
             // 
             // gbxHoraires
@@ -286,16 +288,9 @@ namespace hackatOrga
             this.tbxTheme.Size = new System.Drawing.Size(385, 23);
             this.tbxTheme.TabIndex = 12;
             // 
-            // tbxImage
-            // 
-            this.tbxImage.Location = new System.Drawing.Point(570, 133);
-            this.tbxImage.Name = "tbxImage";
-            this.tbxImage.Size = new System.Drawing.Size(385, 23);
-            this.tbxImage.TabIndex = 15;
-            // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(625, 336);
+            this.btnEnregistrer.Location = new System.Drawing.Point(570, 447);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(143, 52);
             this.btnEnregistrer.TabIndex = 16;
@@ -305,19 +300,38 @@ namespace hackatOrga
             // 
             // nmNbPlaces
             // 
-            this.nmNbPlaces.Location = new System.Drawing.Point(625, 88);
+            this.nmNbPlaces.Location = new System.Drawing.Point(570, 90);
             this.nmNbPlaces.Name = "nmNbPlaces";
             this.nmNbPlaces.Size = new System.Drawing.Size(120, 23);
             this.nmNbPlaces.TabIndex = 18;
+            // 
+            // pbHackathon
+            // 
+            this.pbHackathon.BackColor = System.Drawing.Color.Silver;
+            this.pbHackathon.Location = new System.Drawing.Point(570, 211);
+            this.pbHackathon.Name = "pbHackathon";
+            this.pbHackathon.Size = new System.Drawing.Size(41, 35);
+            this.pbHackathon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbHackathon.TabIndex = 19;
+            this.pbHackathon.TabStop = false;
+            this.pbHackathon.Click += new System.EventHandler(this.pbHackathon_Click);
+            // 
+            // txtImg
+            // 
+            this.txtImg.Location = new System.Drawing.Point(570, 373);
+            this.txtImg.Name = "txtImg";
+            this.txtImg.Size = new System.Drawing.Size(258, 23);
+            this.txtImg.TabIndex = 20;
             // 
             // Ajout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 593);
+            this.Controls.Add(this.txtImg);
+            this.Controls.Add(this.pbHackathon);
             this.Controls.Add(this.nmNbPlaces);
             this.Controls.Add(this.btnEnregistrer);
-            this.Controls.Add(this.tbxImage);
             this.Controls.Add(this.tbxTheme);
             this.Controls.Add(this.gbxAdresse);
             this.Controls.Add(this.gbxHoraires);
@@ -326,11 +340,13 @@ namespace hackatOrga
             this.Controls.Add(this.lblTheme);
             this.Name = "Ajout";
             this.Text = "Ajout";
+            this.Load += new System.EventHandler(this.Ajout_Load);
             this.gbxHoraires.ResumeLayout(false);
             this.gbxHoraires.PerformLayout();
             this.gbxAdresse.ResumeLayout(false);
             this.gbxAdresse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmNbPlaces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHackathon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,10 +386,11 @@ namespace hackatOrga
         private System.Windows.Forms.TextBox tbxRue;
         private System.Windows.Forms.TextBox tbxLieu;
         private System.Windows.Forms.TextBox tbxTheme;
-        private System.Windows.Forms.TextBox tbxImage;
         private System.Windows.Forms.DateTimePicker dtpHeureFin;
         private System.Windows.Forms.DateTimePicker dtpHeureDebut;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.NumericUpDown nmNbPlaces;
+        private System.Windows.Forms.PictureBox pbHackathon;
+        private System.Windows.Forms.TextBox txtImg;
     }
 }

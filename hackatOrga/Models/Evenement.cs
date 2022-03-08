@@ -16,7 +16,7 @@ namespace hackatOrga.Models
         public int? NbParticipants { get; set; }
         public string Intervenant { get; set; }
         public int IdHackathon { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public string Type { get; set; }
 
         public virtual Hackathon IdHackathonNavigation { get; set; }

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace hackatOrga
 {
@@ -28,6 +29,15 @@ namespace hackatOrga
 
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
+            FileStream fs;
+            BinaryReader br;
+            string FileName = txtImg.Text;
+            byte[] ImageData;
+            fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
+            br = new BinaryReader(fs);
+            ImageData = br.ReadBytes((int)fs.Length);
+            br.Close();
+            fs.Close();
             var HeureDebut = new TimeSpan(0,dtpHeureDebut.Value.Hour, dtpHeureFin.Value.Minute);
             var HeureFin = new TimeSpan(0, dtpHeureFin.Value.Hour, dtpHeureFin.Value.Minute);
             int nbPlaces = Decimal.ToInt32(nmNbPlaces.Value);
@@ -45,12 +55,36 @@ namespace hackatOrga
                 Theme = tbxTheme.Text,
                 DateLimite = dtpLimite.Value,
                 NbPlaces = nbPlaces,
-                Image = tbxImage.Text
+                Image = ImageData
             };
             cnx.Hackathons.Add(newHackathon);
             cnx.SaveChanges();
             
             
+        }
+
+        private void pbHackathon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "Image files | *.jpg";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    txtImg.Text = openFileDialog1.FileName;
+                    pbHackathon.Image = System.Drawing.Image.FromFile(openFileDialog1.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Ajout_Load(object sender, EventArgs e)
+        {
+            this.txtImg.Click += new System.EventHandler(this.pbHackathon_Click);
+            this.txtImg.Enter += new System.EventHandler(this.pbHackathon_Click);
         }
     }
 }

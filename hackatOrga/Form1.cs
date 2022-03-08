@@ -82,7 +82,11 @@ namespace hackatOrga
             unDocument.Close();
             doc.Close(); 
             //On ouvre le fichier pdf
-            System.Diagnostics.Process.Start("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe", "C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf") ;
+            if(File.Exists("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe")) 
+            {
+                System.Diagnostics.Process.Start("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe", "C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf");
+            }
+            else { MessageBox.Show ("Foxit PDF introuvable, veuillez ouvrir le document avec un navigateur."); }
         }
 
         private void Form1_Load(object sender, EventArgs e)

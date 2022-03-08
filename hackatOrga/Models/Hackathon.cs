@@ -25,7 +25,7 @@ namespace hackatOrga.Models
         public string Theme { get; set; }
         public DateTime? DateLimite { get; set; }
         public int? NbPlaces { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
 
         public virtual ICollection<Evenement> Evenements { get; set; }
         public virtual ICollection<InscriptionHackathon> InscriptionHackathons { get; set; }
