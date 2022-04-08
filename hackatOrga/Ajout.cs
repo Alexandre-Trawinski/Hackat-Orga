@@ -41,6 +41,22 @@ namespace hackatOrga
             var HeureDebut = new TimeSpan(0,dtpHeureDebut.Value.Hour, dtpHeureFin.Value.Minute);
             var HeureFin = new TimeSpan(0, dtpHeureFin.Value.Hour, dtpHeureFin.Value.Minute);
             int nbPlaces = Decimal.ToInt32(nmNbPlaces.Value);
+
+            
+            string base64Img;
+            using (System.Drawing.Image image = pbHackathon.Image)
+            {
+                using (MemoryStream m = new MemoryStream())
+                {
+                    image.Save(m, image.RawFormat);
+                    byte[] imageBytes = m.ToArray();
+
+                    // Convert byte[] to Base64 String
+                    base64Img = Convert.ToBase64String(imageBytes);
+                    
+                }
+            }
+
             bdatrawinski1Context cnx = new bdatrawinski1Context();
             Hackathon newHackathon = new Hackathon()
             {
@@ -55,10 +71,11 @@ namespace hackatOrga
                 Theme = tbxTheme.Text,
                 DateLimite = dtpLimite.Value,
                 NbPlaces = nbPlaces,
-                Image = ImageData
+                Image = base64Img
             };
             cnx.Hackathons.Add(newHackathon);
             cnx.SaveChanges();
+            lbSucces.Visible = true;
             
             
         }
@@ -68,9 +85,10 @@ namespace hackatOrga
             try
             {
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
-                openFileDialog1.Filter = "Image files | *.jpg";
+                openFileDialog1.Filter = "Image files|*.bmp;*.jpg;*.gif;*.png;*.tif;*.gif";
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
+                    pbHackathon.SizeMode = PictureBoxSizeMode.StretchImage;
                     txtImg.Text = openFileDialog1.FileName;
                     pbHackathon.Image = System.Drawing.Image.FromFile(openFileDialog1.FileName);
                 }

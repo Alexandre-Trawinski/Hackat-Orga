@@ -41,7 +41,7 @@ namespace hackatOrga
             this.tbLibelle = new System.Windows.Forms.TextBox();
             this.tbImgEvent = new System.Windows.Forms.TextBox();
             this.tbSalle = new System.Windows.Forms.TextBox();
-            this.tbIntervenant = new System.Windows.Forms.TextBox();
+            this.tbIntervenantNom = new System.Windows.Forms.TextBox();
             this.nmPlaces = new System.Windows.Forms.NumericUpDown();
             this.radioConf = new System.Windows.Forms.RadioButton();
             this.radioAtelier = new System.Windows.Forms.RadioButton();
@@ -53,6 +53,13 @@ namespace hackatOrga
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pbEvent = new System.Windows.Forms.PictureBox();
+            this.cbIntervenant = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbIntervenantEmail = new System.Windows.Forms.TextBox();
+            this.cbxInter = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lbEventSucces = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmPlaces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEvent)).BeginInit();
@@ -63,7 +70,7 @@ namespace hackatOrga
             this.cbHackathons.FormattingEnabled = true;
             this.cbHackathons.Location = new System.Drawing.Point(61, 76);
             this.cbHackathons.Name = "cbHackathons";
-            this.cbHackathons.Size = new System.Drawing.Size(121, 23);
+            this.cbHackathons.Size = new System.Drawing.Size(274, 23);
             this.cbHackathons.TabIndex = 0;
             this.cbHackathons.SelectedIndexChanged += new System.EventHandler(this.cbHackathon_SelectedIndexChanged);
             // 
@@ -164,12 +171,12 @@ namespace hackatOrga
             this.tbSalle.Size = new System.Drawing.Size(100, 23);
             this.tbSalle.TabIndex = 5;
             // 
-            // tbIntervenant
+            // tbIntervenantNom
             // 
-            this.tbIntervenant.Location = new System.Drawing.Point(527, 356);
-            this.tbIntervenant.Name = "tbIntervenant";
-            this.tbIntervenant.Size = new System.Drawing.Size(100, 23);
-            this.tbIntervenant.TabIndex = 6;
+            this.tbIntervenantNom.Location = new System.Drawing.Point(824, 353);
+            this.tbIntervenantNom.Name = "tbIntervenantNom";
+            this.tbIntervenantNom.Size = new System.Drawing.Size(111, 23);
+            this.tbIntervenantNom.TabIndex = 6;
             // 
             // nmPlaces
             // 
@@ -206,11 +213,11 @@ namespace hackatOrga
             // 
             this.btnAjouter.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjouter.Location = new System.Drawing.Point(624, 439);
+            this.btnAjouter.Location = new System.Drawing.Point(439, 438);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(151, 61);
             this.btnAjouter.TabIndex = 10;
-            this.btnAjouter.Text = "AJOUTER";
+            this.btnAjouter.Text = "AJOUTER L\'EVENEMENT";
             this.btnAjouter.UseVisualStyleBackColor = false;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
@@ -273,19 +280,90 @@ namespace hackatOrga
             // pbEvent
             // 
             this.pbEvent.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pbEvent.Location = new System.Drawing.Point(754, 190);
+            this.pbEvent.Location = new System.Drawing.Point(755, 150);
             this.pbEvent.Name = "pbEvent";
-            this.pbEvent.Size = new System.Drawing.Size(47, 36);
+            this.pbEvent.Size = new System.Drawing.Size(150, 120);
             this.pbEvent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbEvent.TabIndex = 17;
             this.pbEvent.TabStop = false;
             this.pbEvent.Click += new System.EventHandler(this.pbEvent_Click);
+            // 
+            // cbIntervenant
+            // 
+            this.cbIntervenant.FormattingEnabled = true;
+            this.cbIntervenant.Location = new System.Drawing.Point(513, 353);
+            this.cbIntervenant.Name = "cbIntervenant";
+            this.cbIntervenant.Size = new System.Drawing.Size(121, 23);
+            this.cbIntervenant.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(692, 360);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Ajouter un intervenant";
+            // 
+            // tbIntervenantEmail
+            // 
+            this.tbIntervenantEmail.Location = new System.Drawing.Point(824, 415);
+            this.tbIntervenantEmail.Name = "tbIntervenantEmail";
+            this.tbIntervenantEmail.Size = new System.Drawing.Size(111, 23);
+            this.tbIntervenantEmail.TabIndex = 20;
+            // 
+            // cbxInter
+            // 
+            this.cbxInter.AutoSize = true;
+            this.cbxInter.Location = new System.Drawing.Point(824, 460);
+            this.cbxInter.Name = "cbxInter";
+            this.cbxInter.Size = new System.Drawing.Size(134, 19);
+            this.cbxInter.TabIndex = 21;
+            this.cbxInter.Text = "Ajouter l\'intervenant";
+            this.cbxInter.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(824, 326);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 15);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Nom";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(824, 394);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(36, 15);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Email";
+            // 
+            // lbEventSucces
+            // 
+            this.lbEventSucces.AutoSize = true;
+            this.lbEventSucces.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbEventSucces.ForeColor = System.Drawing.Color.Green;
+            this.lbEventSucces.Location = new System.Drawing.Point(624, 525);
+            this.lbEventSucces.Name = "lbEventSucces";
+            this.lbEventSucces.Size = new System.Drawing.Size(249, 25);
+            this.lbEventSucces.TabIndex = 24;
+            this.lbEventSucces.Text = "Evènement ajouté avec succès";
+            this.lbEventSucces.Visible = false;
             // 
             // AjoutEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 564);
+            this.Controls.Add(this.lbEventSucces);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cbxInter);
+            this.Controls.Add(this.tbIntervenantEmail);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbIntervenant);
             this.Controls.Add(this.pbEvent);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -297,7 +375,7 @@ namespace hackatOrga
             this.Controls.Add(this.radioAtelier);
             this.Controls.Add(this.radioConf);
             this.Controls.Add(this.nmPlaces);
-            this.Controls.Add(this.tbIntervenant);
+            this.Controls.Add(this.tbIntervenantNom);
             this.Controls.Add(this.tbSalle);
             this.Controls.Add(this.tbImgEvent);
             this.Controls.Add(this.tbLibelle);
@@ -330,7 +408,7 @@ namespace hackatOrga
         private System.Windows.Forms.TextBox tbLibelle;
         private System.Windows.Forms.TextBox tbImgEvent;
         private System.Windows.Forms.TextBox tbSalle;
-        private System.Windows.Forms.TextBox tbIntervenant;
+        private System.Windows.Forms.TextBox tbIntervenantNom;
         private System.Windows.Forms.NumericUpDown nmPlaces;
         private System.Windows.Forms.RadioButton radioConf;
         private System.Windows.Forms.RadioButton radioAtelier;
@@ -342,5 +420,12 @@ namespace hackatOrga
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pbEvent;
+        private System.Windows.Forms.ComboBox cbIntervenant;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbIntervenantEmail;
+        private System.Windows.Forms.CheckBox cbxInter;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbEventSucces;
     }
 }

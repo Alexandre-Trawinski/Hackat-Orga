@@ -10,6 +10,7 @@ namespace hackatOrga.Models
         public Hackathon()
         {
             Evenements = new HashSet<Evenement>();
+            Favoris = new HashSet<Favori>();
             InscriptionHackathons = new HashSet<InscriptionHackathon>();
         }
 
@@ -25,9 +26,10 @@ namespace hackatOrga.Models
         public string Theme { get; set; }
         public DateTime? DateLimite { get; set; }
         public int? NbPlaces { get; set; }
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
 
         public virtual ICollection<Evenement> Evenements { get; set; }
+        public virtual ICollection<Favori> Favoris { get; set; }
         public virtual ICollection<InscriptionHackathon> InscriptionHackathons { get; set; }
     }
 }

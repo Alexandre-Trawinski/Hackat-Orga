@@ -57,4 +57,730 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblDateDebut.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblDateDebut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 29</value>
+  </data>
+  <data name="lblDateDebut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 15</value>
+  </data>
+  <data name="lblDateDebut.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDateDebut.Text" xml:space="preserve">
+    <value>Date de début :</value>
+  </data>
+  <data name="&gt;&gt;lblDateDebut.Name" xml:space="preserve">
+    <value>lblDateDebut</value>
+  </data>
+  <data name="&gt;&gt;lblDateDebut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDateDebut.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;lblDateDebut.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblHeureDebut.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHeureDebut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 124</value>
+  </data>
+  <data name="lblHeureDebut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 15</value>
+  </data>
+  <data name="lblHeureDebut.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblHeureDebut.Text" xml:space="preserve">
+    <value>Heure de début :</value>
+  </data>
+  <data name="&gt;&gt;lblHeureDebut.Name" xml:space="preserve">
+    <value>lblHeureDebut</value>
+  </data>
+  <data name="&gt;&gt;lblHeureDebut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHeureDebut.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;lblHeureDebut.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDateFin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDateFin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 76</value>
+  </data>
+  <data name="lblDateFin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 15</value>
+  </data>
+  <data name="lblDateFin.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblDateFin.Text" xml:space="preserve">
+    <value>Date de fin :</value>
+  </data>
+  <data name="&gt;&gt;lblDateFin.Name" xml:space="preserve">
+    <value>lblDateFin</value>
+  </data>
+  <data name="&gt;&gt;lblDateFin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDateFin.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;lblDateFin.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblHeureFin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHeureFin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 173</value>
+  </data>
+  <data name="lblHeureFin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 15</value>
+  </data>
+  <data name="lblHeureFin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblHeureFin.Text" xml:space="preserve">
+    <value>Heure de fin :</value>
+  </data>
+  <data name="&gt;&gt;lblHeureFin.Name" xml:space="preserve">
+    <value>lblHeureFin</value>
+  </data>
+  <data name="&gt;&gt;lblHeureFin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHeureFin.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;lblHeureFin.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblLieu.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLieu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 45</value>
+  </data>
+  <data name="lblLieu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="lblLieu.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblLieu.Text" xml:space="preserve">
+    <value>Lieu :</value>
+  </data>
+  <data name="&gt;&gt;lblLieu.Name" xml:space="preserve">
+    <value>lblLieu</value>
+  </data>
+  <data name="&gt;&gt;lblLieu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLieu.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;lblLieu.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblRue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 87</value>
+  </data>
+  <data name="lblRue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 15</value>
+  </data>
+  <data name="lblRue.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblRue.Text" xml:space="preserve">
+    <value>Rue :</value>
+  </data>
+  <data name="&gt;&gt;lblRue.Name" xml:space="preserve">
+    <value>lblRue</value>
+  </data>
+  <data name="&gt;&gt;lblRue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRue.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;lblRue.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblVille.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblVille.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 137</value>
+  </data>
+  <data name="lblVille.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="lblVille.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblVille.Text" xml:space="preserve">
+    <value>Ville :</value>
+  </data>
+  <data name="&gt;&gt;lblVille.Name" xml:space="preserve">
+    <value>lblVille</value>
+  </data>
+  <data name="&gt;&gt;lblVille.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVille.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;lblVille.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblCodePostal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCodePostal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 185</value>
+  </data>
+  <data name="lblCodePostal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="lblCodePostal.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblCodePostal.Text" xml:space="preserve">
+    <value>Code postal :</value>
+  </data>
+  <data name="&gt;&gt;lblCodePostal.Name" xml:space="preserve">
+    <value>lblCodePostal</value>
+  </data>
+  <data name="&gt;&gt;lblCodePostal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCodePostal.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;lblCodePostal.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblTheme.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 43</value>
+  </data>
+  <data name="lblTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 15</value>
+  </data>
+  <data name="lblTheme.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>Thème :</value>
+  </data>
+  <data name="&gt;&gt;lblTheme.Name" xml:space="preserve">
+    <value>lblTheme</value>
+  </data>
+  <data name="&gt;&gt;lblTheme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTheme.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTheme.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbldateLimite.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbldateLimite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 219</value>
+  </data>
+  <data name="lbldateLimite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 15</value>
+  </data>
+  <data name="lbldateLimite.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lbldateLimite.Text" xml:space="preserve">
+    <value>Date limite d'inscription :</value>
+  </data>
+  <data name="&gt;&gt;lbldateLimite.Name" xml:space="preserve">
+    <value>lbldateLimite</value>
+  </data>
+  <data name="&gt;&gt;lbldateLimite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbldateLimite.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;lbldateLimite.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblNbrePlaces.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNbrePlaces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 90</value>
+  </data>
+  <data name="lblNbrePlaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 15</value>
+  </data>
+  <data name="lblNbrePlaces.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblNbrePlaces.Text" xml:space="preserve">
+    <value>Nombre de places :</value>
+  </data>
+  <data name="&gt;&gt;lblNbrePlaces.Name" xml:space="preserve">
+    <value>lblNbrePlaces</value>
+  </data>
+  <data name="&gt;&gt;lblNbrePlaces.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNbrePlaces.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblNbrePlaces.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblImage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 211</value>
+  </data>
+  <data name="lblImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 15</value>
+  </data>
+  <data name="lblImage.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblImage.Text" xml:space="preserve">
+    <value>Image :</value>
+  </data>
+  <data name="&gt;&gt;lblImage.Name" xml:space="preserve">
+    <value>lblImage</value>
+  </data>
+  <data name="&gt;&gt;lblImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblImage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblImage.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="dtpHeureDebut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 115</value>
+  </data>
+  <data name="dtpHeureDebut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="dtpHeureDebut.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureDebut.Name" xml:space="preserve">
+    <value>dtpHeureDebut</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureDebut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureDebut.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureDebut.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dtpHeureFin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 165</value>
+  </data>
+  <data name="dtpHeureFin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="dtpHeureFin.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureFin.Name" xml:space="preserve">
+    <value>dtpHeureFin</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureFin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureFin.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;dtpHeureFin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtpLimite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 213</value>
+  </data>
+  <data name="dtpLimite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="dtpLimite.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;dtpLimite.Name" xml:space="preserve">
+    <value>dtpLimite</value>
+  </data>
+  <data name="&gt;&gt;dtpLimite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpLimite.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;dtpLimite.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dtp_Fin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 70</value>
+  </data>
+  <data name="dtp_Fin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="dtp_Fin.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;dtp_Fin.Name" xml:space="preserve">
+    <value>dtp_Fin</value>
+  </data>
+  <data name="&gt;&gt;dtp_Fin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtp_Fin.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;dtp_Fin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dtpDebut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 23</value>
+  </data>
+  <data name="dtpDebut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 23</value>
+  </data>
+  <data name="dtpDebut.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dtpDebut.Name" xml:space="preserve">
+    <value>dtpDebut</value>
+  </data>
+  <data name="&gt;&gt;dtpDebut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpDebut.Parent" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;dtpDebut.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gbxHoraires.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="gbxHoraires.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 251</value>
+  </data>
+  <data name="gbxHoraires.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="gbxHoraires.Text" xml:space="preserve">
+    <value>Horaires</value>
+  </data>
+  <data name="&gt;&gt;gbxHoraires.Name" xml:space="preserve">
+    <value>gbxHoraires</value>
+  </data>
+  <data name="&gt;&gt;gbxHoraires.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxHoraires.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxHoraires.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tbxCodePostal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 182</value>
+  </data>
+  <data name="tbxCodePostal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 23</value>
+  </data>
+  <data name="tbxCodePostal.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;tbxCodePostal.Name" xml:space="preserve">
+    <value>tbxCodePostal</value>
+  </data>
+  <data name="&gt;&gt;tbxCodePostal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxCodePostal.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;tbxCodePostal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbxVille.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 134</value>
+  </data>
+  <data name="tbxVille.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 23</value>
+  </data>
+  <data name="tbxVille.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tbxVille.Name" xml:space="preserve">
+    <value>tbxVille</value>
+  </data>
+  <data name="&gt;&gt;tbxVille.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxVille.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;tbxVille.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbxRue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 84</value>
+  </data>
+  <data name="tbxRue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 23</value>
+  </data>
+  <data name="tbxRue.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tbxRue.Name" xml:space="preserve">
+    <value>tbxRue</value>
+  </data>
+  <data name="&gt;&gt;tbxRue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxRue.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;tbxRue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbxLieu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 42</value>
+  </data>
+  <data name="tbxLieu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 23</value>
+  </data>
+  <data name="tbxLieu.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tbxLieu.Name" xml:space="preserve">
+    <value>tbxLieu</value>
+  </data>
+  <data name="&gt;&gt;tbxLieu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxLieu.Parent" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;tbxLieu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbxAdresse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 294</value>
+  </data>
+  <data name="gbxAdresse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 227</value>
+  </data>
+  <data name="gbxAdresse.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="gbxAdresse.Text" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="&gt;&gt;gbxAdresse.Name" xml:space="preserve">
+    <value>gbxAdresse</value>
+  </data>
+  <data name="&gt;&gt;gbxAdresse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbxAdresse.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbxAdresse.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tbxTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 38</value>
+  </data>
+  <data name="tbxTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 23</value>
+  </data>
+  <data name="tbxTheme.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;tbxTheme.Name" xml:space="preserve">
+    <value>tbxTheme</value>
+  </data>
+  <data name="&gt;&gt;tbxTheme.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbxTheme.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbxTheme.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnEnregistrer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 447</value>
+  </data>
+  <data name="btnEnregistrer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 52</value>
+  </data>
+  <data name="btnEnregistrer.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnEnregistrer.Text" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="&gt;&gt;btnEnregistrer.Name" xml:space="preserve">
+    <value>btnEnregistrer</value>
+  </data>
+  <data name="&gt;&gt;btnEnregistrer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEnregistrer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEnregistrer.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="nmNbPlaces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 90</value>
+  </data>
+  <data name="nmNbPlaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="nmNbPlaces.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;nmNbPlaces.Name" xml:space="preserve">
+    <value>nmNbPlaces</value>
+  </data>
+  <data name="&gt;&gt;nmNbPlaces.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nmNbPlaces.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nmNbPlaces.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pbHackathon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 211</value>
+  </data>
+  <data name="pbHackathon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 120</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbHackathon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pbHackathon.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;pbHackathon.Name" xml:space="preserve">
+    <value>pbHackathon</value>
+  </data>
+  <data name="&gt;&gt;pbHackathon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbHackathon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbHackathon.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtImg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 373</value>
+  </data>
+  <data name="txtImg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 23</value>
+  </data>
+  <data name="txtImg.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;txtImg.Name" xml:space="preserve">
+    <value>txtImg</value>
+  </data>
+  <data name="&gt;&gt;txtImg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtImg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtImg.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbSucces.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbSucces.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13pt</value>
+  </data>
+  <data name="lbSucces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 530</value>
+  </data>
+  <data name="lbSucces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 25</value>
+  </data>
+  <data name="lbSucces.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lbSucces.Text" xml:space="preserve">
+    <value>Hackathon ajouté avec succès !</value>
+  </data>
+  <data name="lbSucces.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbSucces.Name" xml:space="preserve">
+    <value>lbSucces</value>
+  </data>
+  <data name="&gt;&gt;lbSucces.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbSucces.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbSucces.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>984, 593</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Ajout</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Ajout</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

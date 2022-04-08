@@ -18,6 +18,7 @@ namespace hackatOrga.Models
         }
 
         public virtual DbSet<Evenement> Evenements { get; set; }
+        public virtual DbSet<Favori> Favoris { get; set; }
         public virtual DbSet<Hackathon> Hackathons { get; set; }
         public virtual DbSet<InscriptionHackathon> InscriptionHackathons { get; set; }
         public virtual DbSet<InscriptionMobile> InscriptionMobiles { get; set; }
@@ -50,6 +51,10 @@ namespace hackatOrga.Models
 
                 entity.Property(e => e.Duree).HasColumnName("duree");
 
+                entity.Property(e => e.EmailIntervenant)
+                    .HasColumnName("emailIntervenant")
+                    .HasDefaultValueSql("'NULL'");
+
                 entity.Property(e => e.HeureDebut).HasColumnName("heureDebut");
 
                 entity.Property(e => e.IdHackathon)
@@ -58,7 +63,7 @@ namespace hackatOrga.Models
 
                 entity.Property(e => e.Image)
                     .IsRequired()
-                    .HasColumnType("longblob")
+                    .HasColumnType("longtext")
                     .HasColumnName("image");
 
                 entity.Property(e => e.Intervenant)
@@ -90,6 +95,42 @@ namespace hackatOrga.Models
                     .WithMany(p => p.Evenements)
                     .HasForeignKey(d => d.IdHackathon)
                     .HasConstraintName("evenement_ibfk_1");
+            });
+
+            modelBuilder.Entity<Favori>(entity =>
+            {
+                entity.HasKey(e => e.IdFavoris)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("favoris");
+
+                entity.HasIndex(e => e.IdHackathon, "idHackathon");
+
+                entity.HasIndex(e => e.IdParticipant, "idParticipant");
+
+                entity.Property(e => e.IdFavoris)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("idFavoris");
+
+                entity.Property(e => e.IdHackathon)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("idHackathon");
+
+                entity.Property(e => e.IdParticipant)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("idParticipant");
+
+                entity.HasOne(d => d.IdHackathonNavigation)
+                    .WithMany(p => p.Favoris)
+                    .HasForeignKey(d => d.IdHackathon)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("favoris_ibfk_1");
+
+                entity.HasOne(d => d.IdParticipantNavigation)
+                    .WithMany(p => p.Favoris)
+                    .HasForeignKey(d => d.IdParticipant)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("favoris_ibfk_2");
             });
 
             modelBuilder.Entity<Hackathon>(entity =>
@@ -132,7 +173,7 @@ namespace hackatOrga.Models
                     .HasDefaultValueSql("'NULL'");
 
                 entity.Property(e => e.Image)
-                    .HasColumnType("longblob")
+                    .HasColumnType("longtext")
                     .HasColumnName("image")
                     .HasDefaultValueSql("'NULL'");
 
@@ -157,9 +198,9 @@ namespace hackatOrga.Models
                     .HasColumnName("theme");
 
                 entity.Property(e => e.Ville)
+                    .IsRequired()
                     .HasMaxLength(255)
-                    .HasColumnName("ville")
-                    .HasDefaultValueSql("'NULL'");
+                    .HasColumnName("ville");
             });
 
             modelBuilder.Entity<InscriptionHackathon>(entity =>

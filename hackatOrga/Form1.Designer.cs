@@ -34,13 +34,14 @@ namespace hackatOrga
             this.btn_imprimer = new System.Windows.Forms.Button();
             this.cbx_hackathons = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnTabDeBord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_AjoutEvenement
             // 
             this.btn_AjoutEvenement.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_AjoutEvenement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AjoutEvenement.Location = new System.Drawing.Point(522, 203);
+            this.btn_AjoutEvenement.Location = new System.Drawing.Point(534, 142);
             this.btn_AjoutEvenement.Name = "btn_AjoutEvenement";
             this.btn_AjoutEvenement.Size = new System.Drawing.Size(143, 97);
             this.btn_AjoutEvenement.TabIndex = 0;
@@ -52,7 +53,7 @@ namespace hackatOrga
             // 
             this.btn_AjoutHackathon.BackColor = System.Drawing.Color.LightGreen;
             this.btn_AjoutHackathon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AjoutHackathon.Location = new System.Drawing.Point(328, 203);
+            this.btn_AjoutHackathon.Location = new System.Drawing.Point(340, 142);
             this.btn_AjoutHackathon.Name = "btn_AjoutHackathon";
             this.btn_AjoutHackathon.Size = new System.Drawing.Size(143, 97);
             this.btn_AjoutHackathon.TabIndex = 1;
@@ -65,7 +66,7 @@ namespace hackatOrga
             this.btn_imprimer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_imprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_imprimer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_imprimer.Location = new System.Drawing.Point(139, 203);
+            this.btn_imprimer.Location = new System.Drawing.Point(151, 142);
             this.btn_imprimer.Name = "btn_imprimer";
             this.btn_imprimer.Size = new System.Drawing.Size(143, 97);
             this.btn_imprimer.TabIndex = 2;
@@ -76,7 +77,7 @@ namespace hackatOrga
             // cbx_hackathons
             // 
             this.cbx_hackathons.FormattingEnabled = true;
-            this.cbx_hackathons.Location = new System.Drawing.Point(139, 165);
+            this.cbx_hackathons.Location = new System.Drawing.Point(151, 104);
             this.cbx_hackathons.Name = "cbx_hackathons";
             this.cbx_hackathons.Size = new System.Drawing.Size(143, 23);
             this.cbx_hackathons.TabIndex = 4;
@@ -94,11 +95,26 @@ namespace hackatOrga
             this.label1.TabIndex = 5;
             this.label1.Text = "Bienvenue sur Hackat\'Orga";
             // 
+            // btnTabDeBord
+            // 
+            this.btnTabDeBord.BackColor = System.Drawing.Color.White;
+            this.btnTabDeBord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTabDeBord.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTabDeBord.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnTabDeBord.Location = new System.Drawing.Point(151, 328);
+            this.btnTabDeBord.Name = "btnTabDeBord";
+            this.btnTabDeBord.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnTabDeBord.Size = new System.Drawing.Size(526, 55);
+            this.btnTabDeBord.TabIndex = 6;
+            this.btnTabDeBord.Text = "Tableau de bord";
+            this.btnTabDeBord.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTabDeBord);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbx_hackathons);
             this.Controls.Add(this.btn_imprimer);
@@ -119,6 +135,7 @@ namespace hackatOrga
         private System.Windows.Forms.Button btn_imprimer;
         private System.Windows.Forms.ComboBox cbx_hackathons;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnTabDeBord;
     }
 }
 
