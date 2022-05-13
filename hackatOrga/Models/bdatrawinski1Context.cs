@@ -17,6 +17,7 @@ namespace hackatOrga.Models
         {
         }
 
+        public virtual DbSet<DoctrineMigrationVersion> DoctrineMigrationVersions { get; set; }
         public virtual DbSet<Evenement> Evenements { get; set; }
         public virtual DbSet<Favori> Favoris { get; set; }
         public virtual DbSet<Hackathon> Hackathons { get; set; }
@@ -28,13 +29,34 @@ namespace hackatOrga.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//#warningToprotect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseMySQL("server=192.168.4.1;port=3306;user=sqlatrawinski;password=savary;database=bdatrawinski1;sslmode=none");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<DoctrineMigrationVersion>(entity =>
+            {
+                entity.HasKey(e => e.Version)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("doctrine_migration_versions");
+
+                entity.Property(e => e.Version)
+                    .HasMaxLength(191)
+                    .HasColumnName("version");
+
+                entity.Property(e => e.ExecutedAt)
+                    .HasColumnName("executed_at")
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.ExecutionTime)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("execution_time")
+                    .HasDefaultValueSql("'NULL'");
+            });
+
             modelBuilder.Entity<Evenement>(entity =>
             {
                 entity.ToTable("evenement");
@@ -145,9 +167,9 @@ namespace hackatOrga.Models
                     .HasColumnName("idHackathon");
 
                 entity.Property(e => e.CodePostal)
+                    .IsRequired()
                     .HasMaxLength(5)
                     .HasColumnName("codePostal")
-                    .HasDefaultValueSql("'NULL'")
                     .IsFixedLength(true);
 
                 entity.Property(e => e.DateDebut)
@@ -156,21 +178,15 @@ namespace hackatOrga.Models
 
                 entity.Property(e => e.DateFin)
                     .HasColumnType("date")
-                    .HasColumnName("dateFin")
-                    .HasDefaultValueSql("'NULL'");
+                    .HasColumnName("dateFin");
 
                 entity.Property(e => e.DateLimite)
                     .HasColumnType("date")
-                    .HasColumnName("dateLimite")
-                    .HasDefaultValueSql("'NULL'");
+                    .HasColumnName("dateLimite");
 
-                entity.Property(e => e.HeureDebut)
-                    .HasColumnName("heureDebut")
-                    .HasDefaultValueSql("'NULL'");
+                entity.Property(e => e.HeureDebut).HasColumnName("heureDebut");
 
-                entity.Property(e => e.HeureFin)
-                    .HasColumnName("heureFin")
-                    .HasDefaultValueSql("'NULL'");
+                entity.Property(e => e.HeureFin).HasColumnName("heureFin");
 
                 entity.Property(e => e.Image)
                     .HasColumnType("longtext")
@@ -178,19 +194,18 @@ namespace hackatOrga.Models
                     .HasDefaultValueSql("'NULL'");
 
                 entity.Property(e => e.Lieu)
+                    .IsRequired()
                     .HasMaxLength(255)
-                    .HasColumnName("lieu")
-                    .HasDefaultValueSql("'NULL'");
+                    .HasColumnName("lieu");
 
                 entity.Property(e => e.NbPlaces)
                     .HasColumnType("int(11)")
-                    .HasColumnName("nbPlaces")
-                    .HasDefaultValueSql("'NULL'");
+                    .HasColumnName("nbPlaces");
 
                 entity.Property(e => e.Rue)
+                    .IsRequired()
                     .HasMaxLength(255)
-                    .HasColumnName("rue")
-                    .HasDefaultValueSql("'NULL'");
+                    .HasColumnName("rue");
 
                 entity.Property(e => e.Theme)
                     .IsRequired()

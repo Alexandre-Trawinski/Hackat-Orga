@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace hackatOrga
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
@@ -35,17 +35,16 @@ namespace hackatOrga
             //iTextSharp.LGPLv2.Core
             //Création d'un document
              Document unDocument = new Document();
-             FileStream doc = new FileStream("C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf", FileMode.Create);
+             
+             FileStream doc = new FileStream("listeParticipants.pdf", FileMode.Create);
              PdfWriter.GetInstance(unDocument, doc);
              unDocument.Open();
-
-             //Paragraphe centré avec une police de 14 et du gras
-             iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD);
+            //Paragraphe centré avec une police de 14 et du gras
+            iTextSharp.text.Font myFont = FontFactory.GetFont("Arial", 14, iTextSharp.text.Font.BOLD);
              Paragraph titre = new Paragraph("Liste des participants", myFont);
              titre.Alignment = Element.ALIGN_CENTER;
              titre.SpacingAfter = 12;
              unDocument.Add(titre);
-            string toto = "toto";
 
              //Création d'un tableau
              PdfPTable tableau = new PdfPTable(7);
@@ -85,7 +84,8 @@ namespace hackatOrga
             //On ouvre le fichier pdf
             if(File.Exists("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe")) 
             {
-                System.Diagnostics.Process.Start("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe", "C:\\Users\\tfavreau\\Documents\\listeParticipants.pdf");
+                System.Diagnostics.Process.Start("C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe", 
+                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\listeParticipants.pdf");
             }
             else { MessageBox.Show ("Foxit PDF introuvable, veuillez ouvrir le document avec un navigateur."); }
         }

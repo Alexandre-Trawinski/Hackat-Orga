@@ -1,7 +1,7 @@
 ﻿
 namespace hackatOrga
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         ///  Required designer variable.
@@ -98,6 +98,7 @@ namespace hackatOrga
             // btnTabDeBord
             // 
             this.btnTabDeBord.BackColor = System.Drawing.Color.White;
+            this.btnTabDeBord.Enabled = false;
             this.btnTabDeBord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTabDeBord.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTabDeBord.ForeColor = System.Drawing.Color.SeaGreen;
@@ -109,7 +110,7 @@ namespace hackatOrga
             this.btnTabDeBord.Text = "Tableau de bord";
             this.btnTabDeBord.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,8 +121,8 @@ namespace hackatOrga
             this.Controls.Add(this.btn_imprimer);
             this.Controls.Add(this.btn_AjoutHackathon);
             this.Controls.Add(this.btn_AjoutEvenement);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Home";
+            this.Text = "Hackat\'Orga";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

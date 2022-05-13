@@ -38,11 +38,6 @@ namespace hackatOrga
             ImageData = br.ReadBytes((int)fs.Length);
             br.Close();
             fs.Close();
-            var HeureDebut = new TimeSpan(0,dtpHeureDebut.Value.Hour, dtpHeureFin.Value.Minute);
-            var HeureFin = new TimeSpan(0, dtpHeureFin.Value.Hour, dtpHeureFin.Value.Minute);
-            int nbPlaces = Decimal.ToInt32(nmNbPlaces.Value);
-
-            
             string base64Img;
             using (System.Drawing.Image image = pbHackathon.Image)
             {
@@ -53,9 +48,11 @@ namespace hackatOrga
 
                     // Convert byte[] to Base64 String
                     base64Img = Convert.ToBase64String(imageBytes);
-                    
                 }
             }
+            var HeureDebut = new TimeSpan(0,dtpHeureDebut.Value.Hour, dtpHeureFin.Value.Minute);
+            var HeureFin = new TimeSpan(0, dtpHeureFin.Value.Hour, dtpHeureFin.Value.Minute);
+            int nbPlaces = Decimal.ToInt32(nmNbPlaces.Value);
 
             bdatrawinski1Context cnx = new bdatrawinski1Context();
             Hackathon newHackathon = new Hackathon()
